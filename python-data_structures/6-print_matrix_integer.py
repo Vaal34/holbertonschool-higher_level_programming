@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for i in matrix:
+    for vertical in matrix:
         x = 0
-        for j in i:
+        for horizontal in vertical:
             x += 1
-            if x is len(i):
-                print("{:d}".format(j), end="")
+            if x is len(vertical):
+                print("{:d}".format(horizontal), end="")
             else:
-                print("{:d}".format(j), end=" ")
+                print("{:d}".format(horizontal), end=" ")
         print()
