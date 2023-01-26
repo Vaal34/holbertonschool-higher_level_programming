@@ -2,4 +2,4 @@
 def best_score(a_dictionary):
     if not a_dictionary:
         return None
-    return sorted(a_dictionary.keys())[-1]
+    return sorted(a_dictionary, key = a_dictionary.get)[-1]
