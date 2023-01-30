@@ -47,7 +47,7 @@ class Square:
     def my_print(self):
         """print square"""
         if self.__size == 0:
-            print()
+            return print()
         for underscore in range(self.__position[1]):
             print(end="\n" if self.__position[1] > 0 else "")
         for i in range(self.__size):
