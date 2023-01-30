@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """ empty class Square that defines a square """
 
@@ -13,14 +14,16 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
 
+    @property
     def size(self):
+        """getter instance"""
         return self.__size
-    
-    def size(self, value):
-        self.size = value
 
+    @size.setter
+    def size(self, value):
+        """setter instance"""
+        self.__size = value
+    
     def area(self):
         """returns the current square area"""
         return self.__size ** 2
-    
-
