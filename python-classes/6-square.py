@@ -50,7 +50,7 @@ class Square:
             print()
         for i in range(self.__size):
             for underscore in range(self.__position[0]):
-                print(end='_')
+                print(end=' ')
             for j in range(self.__size):
                 print('#', end='')
             print()
