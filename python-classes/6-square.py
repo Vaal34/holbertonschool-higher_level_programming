@@ -49,10 +49,10 @@ class Square:
         if self.__size == 0:
             print()
         for underscore in range(self.__position[1]):
-            print()
+            print(end="\n" if self.__position[1] > 0 else "")
         for i in range(self.__size):
             for underscore in range(self.__position[0]):
-                print(end=" " if self.__position[1] > 0 else "")
+                print(end=" ")
             for j in range(self.__size):
                 print('#', end='')
             print()
