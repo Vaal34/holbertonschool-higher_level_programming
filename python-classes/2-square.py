@@ -6,7 +6,7 @@ class Square:
     """ empty class Square that defines a square """
 
     def __init__(self, size=0):
-        """Private instance attribute""" 
+        """Private instance attribute"""
         self.__size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
