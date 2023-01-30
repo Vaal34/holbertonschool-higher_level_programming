@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ empty class Square that defines a square """
 
@@ -27,7 +26,7 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-    
+
     def area(self):
         """returns the current square area"""
         return self.__size ** 2
