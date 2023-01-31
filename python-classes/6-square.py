@@ -9,6 +9,8 @@ class Square:
         """Private instance attribute"""
         self.__size = size
         self.__position = position
+        if type(position) is not tuple or len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -36,8 +38,6 @@ class Square:
     @position.setter
     def position(self, value):
         """setter instance"""
-        if type(value) is not tuple or value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
