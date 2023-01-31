@@ -9,9 +9,11 @@ class Square:
         """Private instance attribute"""
         self.__size = size
         self.__position = position
-        if type(position) is not tuple or len(position) != 2:
+        if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
         if position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position) is not tuple or len(position) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(size) is not int:
             raise TypeError("size must be an integer")
