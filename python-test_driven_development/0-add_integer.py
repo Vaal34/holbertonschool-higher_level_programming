@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 def add_integer(a, b=98):
+    """ Addition function """
     try:
         result = a + b
         return int(result)
