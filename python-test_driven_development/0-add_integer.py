@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" 
+"""
     My calculation module
 """
+
 
 def add_integer(a, b=98):
     """ Addition function """
