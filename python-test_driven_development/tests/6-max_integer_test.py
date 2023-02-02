@@ -21,8 +21,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_only_negatif_number(self):
         self.assertEqual(max_integer([-4, -3, -1, -2]), -1)
 
-    def list_of_one_element(self):
+    def test_of_one_element(self):
         self.assertEqual(max_integer([2]), 2)
 
-    def list_is_empty(self):
-        self.assertEqual(max_integer(len(self)), 0)
+    def test_is_empty(self):
+        self.assertEqual(max_integer([]), None)
