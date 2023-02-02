@@ -1,2 +1,18 @@
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
+>>> matrix = [[3, 9], [12, 3]]
+>>> matrix_divided(matrix, 2)
+[[1.5, 4.5], [6.0, 1.5]]
+
+>>> matrix = [[3, 2], [12, 3]]
+>>> matrix_divided(matrix, "2")
+'div must be a number'
+
+>>> matrix = [[3, 9], [12, 3]]
+>>> matrix_divided(matrix, 0)
+'division by zero'
+
+
+
+
+
