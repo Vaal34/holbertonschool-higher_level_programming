@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 def text_indentation(text):
-    i = 0
+    carspecial = False
     if type(text) is not str:
         raise TypeError("text must be a string")
-    while i != len(text):
-        if text[i] in ["." , "?", ":"]:
-            print(f"{text[i]}")
-            if text[i + 1] == ' ':
-                i += 1
-            else:
-                print()
+    for value in text:
+        if value in [".", "?", ":"]:
+            print(value)
+            carspecial = True
         else:
-            print(f"{text[i]}", end='')
-        i += 1
+            if carspecial and value == ' ':
+                pass
+            else:
+                carspecial = False
+                print(value, end='')
