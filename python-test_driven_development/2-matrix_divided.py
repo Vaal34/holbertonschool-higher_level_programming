@@ -17,6 +17,6 @@ def matrix_divided(matrix, div):
                 elif type(j) not in [int, float]:
                     raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         if ref_size != len(i):
-            raise "Each row of the matrix must have the same size"
+            raise TypeError("Each row of the matrix must have the same size")
         matrix_matrix.append(valeur_matrix)
     return matrix_matrix
