@@ -13,3 +13,4 @@ def text_indentation(text):
             else:
                 carspecial = False
                 print(value, end='')
+    print()
