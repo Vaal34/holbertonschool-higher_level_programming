@@ -25,4 +25,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([2]), 2)
 
     def list_is_empty(self):
-        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer(len(self)), 0)
