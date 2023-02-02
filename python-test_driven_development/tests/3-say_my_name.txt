@@ -1,0 +1,10 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("John", 2)
+first_name must be a string
+
+>>> say_my_name(2, "John")
+last_name must be a string
