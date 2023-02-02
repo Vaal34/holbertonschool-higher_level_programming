@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" Doc """
+
+
 def text_indentation(text):
+    """ Jump lines if text is [".", "?", ":"] """
     carspecial = False
     if type(text) is not str:
         raise TypeError("text must be a string")
