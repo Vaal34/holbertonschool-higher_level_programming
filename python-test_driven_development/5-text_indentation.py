@@ -6,6 +6,7 @@ def text_indentation(text):
     for value in text:
         if value in [".", "?", ":"]:
             print(value)
+            print()
             carspecial = True
         else:
             if carspecial and value == ' ':
@@ -13,3 +14,4 @@ def text_indentation(text):
             else:
                 carspecial = False
                 print(value, end='')
+    print()
