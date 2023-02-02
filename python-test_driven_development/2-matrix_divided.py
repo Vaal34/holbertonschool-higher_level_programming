@@ -9,14 +9,11 @@ def matrix_divided(matrix, div):
     for i in matrix:
         valeur_matrix = []
         for j in i:
-            try:
-                valeur_matrix.append(round(float(j / div), 2))
-            except TypeError:
-                if type(div) not in [int, float]:
-                    raise("div must be a number")
-                elif type(j) not in [int, float]:
-                    raise("matrix must be a matrix (list of lists) of integers/floats")
-                return
+            if type(div) not in [int, float]:
+                raise TypeError("div must be a number")
+            elif type(j) not in [int, float]:
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            valeur_matrix.append(round(float(j / div), 2))
         if ref_size != len(i):
             raise TypeError("Each row of the matrix must have the same size")
         matrix_matrix.append(valeur_matrix)
