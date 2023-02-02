@@ -2,12 +2,19 @@
 
 >>> text_indentation("Salut ca va ? oui et toi? Tres bien. Tu pense quoi de ce tableau: 1. 2. 3. 4")
 Salut ca va ?
+<BLANKLINE>
 oui et toi?
+<BLANKLINE>
 Tres bien.
+<BLANKLINE>
 Tu pense quoi de ce tableau:
+<BLANKLINE>
 1.
+<BLANKLINE>
 2.
+<BLANKLINE>
 3.
+<BLANKLINE>
 4
 
 >>> text_indentation()
