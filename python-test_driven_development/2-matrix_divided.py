@@ -8,10 +8,10 @@ def matrix_divided(matrix, div):
             try:
                 valeur_matrix.append(round(float(j / div), 2))
             except TypeError:
-                if type(div) is not int or type(div) is not float:
-                    print("div must be a number")
-                else:
-                    print("matrix must be a matrix (list of lists) of integers/floats")
+                if type(div) not in [int, float]:
+                    raise TypeError("div must be a number")
+                elif type(j) not in [int, float]: 
+                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         if ref_size != len(i):
             raise TypeError("Each row of the matrix must have the same size")
         matrix_matrix.append(valeur_matrix)
