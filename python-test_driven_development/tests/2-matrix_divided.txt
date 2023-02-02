@@ -27,4 +27,10 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix = [[3, 9], [12, 3]]
 >>> matrix_divided(matrix)
 Traceback (most recent call last):
-TypeError: matrix_divided() missing 1 required positional argument: 'div'
+TypeError: matrix_divided() missing 1 required positional argument: 'div'>>> matrix = [[3, 9], [12, 3]]
+
+>>> matrix = [[3, 9], [12, 3]]
+>>> matrix_divided(matrix, float("inf"))
+[[0.0, 0.0], [0.0, 0.0]]
+
+

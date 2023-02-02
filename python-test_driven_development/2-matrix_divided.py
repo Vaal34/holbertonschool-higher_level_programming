@@ -14,7 +14,10 @@ def matrix_divided(matrix, div):
                 raise TypeError("div must be a number")
             elif type(j) not in [int, float]:
                 raise TypeError(error)
-            valeur_matrix.append(round(float(j / div), 2))
+            if div is float("inf"):
+                valeur_matrix.append(0.0)
+            else:
+                valeur_matrix.append(round(float(j / div), 2))
         if ref_size != len(i):
             raise TypeError("Each row of the matrix must have the same size")
         matrix_matrix.append(valeur_matrix)
