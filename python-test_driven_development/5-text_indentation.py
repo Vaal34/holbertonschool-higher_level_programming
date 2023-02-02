@@ -6,7 +6,10 @@ def text_indentation(text):
     while i != len(text):
         if text[i] in ["." , "?", ":"]:
             print(f"{text[i]}")
-            i += 1
+            if text[i + 1] == ' ':
+                i += 1
+            else:
+                print()
         else:
             print(f"{text[i]}", end='')
         i += 1
