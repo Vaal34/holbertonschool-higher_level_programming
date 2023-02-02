@@ -14,7 +14,6 @@ def matrix_divided(matrix, div):
                 raise TypeError("div must be a number")
             elif type(j) not in [int, float]:
                 raise TypeError(error)
-            
             if div == float("inf"):
                 valeur_matrix.append(0.0)
             else:
