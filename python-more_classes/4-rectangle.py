@@ -64,5 +64,5 @@ class Rectangle:
 
     def __repr__(self):
         """ repr rectangle """
-        rep = "Rectangle(" + f"{self.__width}" + ", " + f"{self.__height}" + ")"
+        rep = f"Rectangle({self.__width}, {self.__height})"
         return rep
