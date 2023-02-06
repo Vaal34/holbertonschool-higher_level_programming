@@ -1,20 +1,25 @@
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 
->>> my_list.print_sorted()
+>>> print(my_list)
 []
 
->>> print(my_list)
+>>> my_list.print_sorted()
 []
 
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
+
 >>> print(my_list)
 [1, 4, 2]
 
 >>> my_list.print_sorted()
 [1, 2, 4]
+
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1, 1, 2, 4]
 
 >>> my_list.append("R")
 >>> my_list.print_sorted()
@@ -25,4 +30,7 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 Traceback (most recent call last):
 TypeError: append() takes exactly one argument (0 given)
 
->>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1, 1, 4, 5]
+>>> print(my_list)
+[1, 4, 5, -1]
