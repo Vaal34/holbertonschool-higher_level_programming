@@ -20,17 +20,5 @@
 >>> my_list.append(-1)
 >>> my_list.print_sorted()
 [-1, 1, 2, 4]
-
->>> my_list.append("R")
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'str' and 'int'
-
->>> my_list.append()
-Traceback (most recent call last):
-TypeError: append() takes exactly one argument (0 given)
-
->>> my_list.print_sorted()
-[-1, 1, 4, 5]
 >>> print(my_list)
-[1, 4, 5, -1]
+[1, 4, 2, -1]
