@@ -20,3 +20,7 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 >>> my_list.append()
 Traceback (most recent call last):
 TypeError: append() takes exactly one argument (0 given)
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
