@@ -24,3 +24,9 @@ TypeError: append() takes exactly one argument (0 given)
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> print(id([]) is id(my_list))
+False
