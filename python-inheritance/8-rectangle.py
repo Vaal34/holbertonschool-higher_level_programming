@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+""" Doc """
+
+
+class BaseGeometry:
+    """ Class BaseGeometry """
+    
+    def area(self):
+        """ area """
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """ integer validator """
+        self.value = value
+        if type(self.value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if self.value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
+class Rectangle(BaseException):
+    """ SubClass BaseGeometry """
+    
+    def __init__(self, width, height):
+        """ Instantiation """
+        self.__width = width
+        self.__height = height
+        self.__width = BaseGeometry.integer_validator(self, self.__width, width)
+        self.__height = BaseGeometry.integer_validator(self, self.__height, height)
