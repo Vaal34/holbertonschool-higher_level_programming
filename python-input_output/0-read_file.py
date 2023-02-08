@@ -6,4 +6,3 @@ def read_file(filename=""):
     with open(filename, 'r') as text:
         for value in text:
             print(value, end='')
-    print()
