@@ -9,6 +9,6 @@ def class_to_json(obj):
 
 """
 obj.__dict__ renvoie un dictionnaire représentant les attributs de l'objet obj
-__dict__ est un attribut spécial d'un objet en Python
+__dict__ est  un attribut spécial d'un objet en Python
 qui contient tous les attributs de cet objet sous forme de dictionnaire.
 """
