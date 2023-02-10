@@ -18,4 +18,7 @@ class Student:
             if attrs is not None:
                 if i in attrs:
                     dico[i] = self.__dict__[i]
+            else:
+                return self.__dict__
         return dico
+        
