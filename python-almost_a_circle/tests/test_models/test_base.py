@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """ Doc """
 import unittest
-Base = __import__('base').Base
+Base = __import__("base").Base
 
-class TestBase(unittest.TestCase):
+class test_Base(unittest.TestCase):
     """ Class test """
 
-    def testIdExist(self):
+    def test_IdExist(self):
         """ unittest id exist """
         self.assertEqual(Base(), 1)
 
-    def testIdExist_plus1(self):
+    def test_IdExist_plus1(self):
         """ unittest id exist """
         self.assertEqual(Base(), 2)
 
-    def testId89(self):
+    def test_Id89(self):
         """ unittest id exist """
         self.assertEqual(Base(89), 89)
