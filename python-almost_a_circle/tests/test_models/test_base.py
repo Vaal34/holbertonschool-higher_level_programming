@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Doc """
 import unittest
-Base = __import__("base").Base
+from models.base import Base
 
 class test_Base(unittest.TestCase):
     """ Class test """
