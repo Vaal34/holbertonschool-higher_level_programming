@@ -8,12 +8,18 @@ class test_Base(unittest.TestCase):
 
     def test_IdExist(self):
         """ unittest id exist """
-        self.assertEqual(Base(), 1)
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
 
     def test_IdExist_plus1(self):
         """ unittest id exist """
-        self.assertEqual(Base(), 2)
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
 
     def test_Id89(self):
         """ unittest id exist """
-        self.assertEqual(Base(89), 89)
+        b1 = Base(89)
+        self.assertEqual(b1.id, 89)
+
+if __name__ == '__main__':
+    unittest.main()
