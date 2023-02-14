@@ -80,6 +80,7 @@ class Rectangle(Base):
         return string + string2
 
     def update(self, *args):
+        """ update func"""
         if args:
             # si un args exist id prend a la valeur de args[0]
             self.id = args[0]
