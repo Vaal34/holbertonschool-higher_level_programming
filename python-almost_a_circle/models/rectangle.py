@@ -82,7 +82,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ update func"""
 
-        if len(args) > 0:    
+        if len(args) > 0:
             if args:
                 # si un args exist id prend a la valeur de args[0]
                 self.id = args[0]
