@@ -65,7 +65,11 @@ class Rectangle(Base):
 
     def display(self):
         """ method that display the rectangle """
+        for position_y in range(self.__y):
+            print(end="\n" if self.__y > 0 else "")
         for hauteur in range(self.__height):
+            for position_x in range(self.__x):
+                print(end=" ")
             for largeur in range(self.__width):
                 print("#", end='')
             print()
