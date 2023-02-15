@@ -27,6 +27,7 @@ class Square(Rectangle):
         return string + string2
 
     def update(self, *args, **kwargs):
+        """ update attr"""
         if len(args) > 0:
             if args:
                 self.id = args[0]
