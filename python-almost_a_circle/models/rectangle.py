@@ -62,3 +62,46 @@ class Rectangle(Base):
         elif value_y < 0:
             raise ValueError("y must be >= 0")
         self.__y = value_y
+
+    def area(self):
+        """ method area """
+        return self.__width * self.__height
+
+    def display(self):
+        """ method that display the rectangle """
+        for position_y in range(self.__y):
+            print(end="\n" if self.__y > 0 else "")
+        for hauteur in range(self.__height):
+            for position_x in range(self.__x):
+                print(end=" ")
+            for largeur in range(self.__width):
+                print("#", end='')
+            print()
+
+    def __str__(self):
+        string = f"[Rectangle] ({self.id}) {self.x}/{self.y}"
+        string2 = f" - {self.width}/{self.height}"
+        return string + string2
+
+    def update(self, *args, **kwargs):
+        """ update func"""
+
+        if len(args) > 0:
+            if args:
+                # si un args exist id prend a la valeur de args[0]
+                self.id = args[0]
+            if len(args) > 1:
+                # si le 2eme args exist width prend a la valeur de args[1]
+                self.__width = args[1]
+            if len(args) > 2:
+                # si 3eme args exist height prend a la valeur de args[2]
+                self.__height = args[2]
+            if len(args) > 3:
+                # si 4eme args exist x prend a la valeur de args[3]
+                self.__x = args[3]
+            if len(args) > 4:
+                # si 5eme args exist y prend a la valeur de args[4]
+                self.__y = args[4]
+        else:
+            for cle, valeur in kwargs.items():
+                setattr(self, cle, valeur)
