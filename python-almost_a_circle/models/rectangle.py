@@ -105,3 +105,8 @@ class Rectangle(Base):
         else:
             for cle, valeur in kwargs.items():
                 setattr(self, cle, valeur)
+
+    def to_dictionary(self):
+        """ dictionnaire """
+        dico = {"id":self.id, "width":self.width, "height":self.height, "x":self.x, "y":self.y}
+        return dico
