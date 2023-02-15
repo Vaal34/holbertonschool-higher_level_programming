@@ -39,4 +39,4 @@ class Square(Rectangle):
                 self.y = args[3]
         else:
             for cle, valeur in kwargs.items():
-                setattr(self, cle, valeur)       
+                setattr(self, cle, valeur)
