@@ -28,7 +28,7 @@ class Base:
     def save_to_file(cls, list_objs):
         filename = cls.__name__ + ".json"
         dict = []
-        if list_objs is None and len(list_objs) == 0:
+        if not list_objs or list_objs is None:
             dict = []
         else:
             for key in list_objs:
