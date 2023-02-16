@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """ Doc """
 
+
 import json
+
 
 class Base:
     """ Class Base """
@@ -22,7 +24,14 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
     
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
-        with open(f"{cls.__name__}.json", 'w') as w:
-            w.write(cls(Base.to_json_string(list_objs)))
+        filename = cls.__name__ + ".json"
+        dict = []
+        if list_objs is None and len(list_objs) == 0:
+            dict = []
+        else:
+            for key in list_objs:
+                dict.append(key.to_dictionary())
+        with open(filename, 'w') as w:
+            w.write(cls.to_json_string(dict))
