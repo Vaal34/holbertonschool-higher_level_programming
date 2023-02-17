@@ -23,7 +23,7 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         filename = cls.__name__ + ".json"
@@ -52,3 +52,25 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as r:
+                file = r.read()
+                dictionnary = cls.from_json_string(file)
+                return [cls.create(**dict) for dict in dictionnary]
+        except FileNotFoundError:
+            return []
+
+        """with open(filename, "r") as r:
+            file = r.read()
+            dictionnaire = cls.from_json_string(file)
+            print(list)
+            new_dic = {}
+            for  in dictionnaire:
+                for key, value in dictionnaire.items():
+                    new_dic[key] = value
+                return [cls.create(**new_dic)]
+        """
