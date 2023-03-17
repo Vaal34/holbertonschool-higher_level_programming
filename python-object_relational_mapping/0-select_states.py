@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Script Python pour afficher les états de la table
+"""Script Python pour afficher les états de la table
 "states" d'une base de données MySQL triés par ID.
 """
 
