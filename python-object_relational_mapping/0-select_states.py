@@ -2,7 +2,6 @@
 """Script Python pour afficher les états de la table
 "states" d'une base de données MySQL triés par ID.
 """
-
 from sys import argv    # importe le module argv du module sys
 import MySQLdb    # importe la bibliothèque MySQLdb
 
