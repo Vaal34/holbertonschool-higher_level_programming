@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # exécute une requête SQL pour sélectionner
     # toutes les lignes de la table "states" et les trier par ID
-    cur.execute("SELECT name FROM states WHERE name LIKE '%N'")
+    cur.execute("SELECT name FROM states WHERE name LIKE 'N%' ORDER BY id")
 
     # récupère les résultats de la requête sous forme de liste de tuples
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     for row in rows:
         print(row)
-    # ferme le curseur et la connexion à la base de données
 
+    # ferme le curseur et la connexion à la base de données
     cur.close()
     db.close()
