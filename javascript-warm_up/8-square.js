@@ -9,7 +9,7 @@ if (x === undefined) {
 } else {
   for (let i = 0; i < x; i++) {
     for (let j = 0; j < x; j++) {
-      process.stdout.write('x'); // use this for don't jump on another line
+      process.stdout.write('X'); // use this for don't jump on another line
     }
     console.log();
   }
