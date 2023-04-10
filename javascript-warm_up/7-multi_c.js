@@ -8,6 +8,6 @@ if (x === undefined) {
   // pass // use '// pass' for do nothing
 } else {
   for (let i = 0; i < x; i++) {
-    console.log('C is Fun');
+    console.log('C is fun');
   }
 }
