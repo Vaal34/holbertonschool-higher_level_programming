@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const x = process.argv[2];
+const x = Number(process.argv[2]);
 
-if (x === undefined) {
+if (x === undefined || isNaN(x)) {
   console.log('Missing number of occurrences');
 } else if (x < 0) {
   // pass // use '// pass' for do nothing
