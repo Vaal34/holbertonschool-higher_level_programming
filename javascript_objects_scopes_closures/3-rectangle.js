@@ -4,8 +4,8 @@ class Rectangle {
     if (h <= 0 || w <= 0 || h === undefined || w === undefined) { // si un param est < 0 ou n'st pas donné
       return;
     }
-    this.height = h;
     this.width = w;
+    this.height = h;
   }
 
   print () {
