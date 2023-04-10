@@ -3,7 +3,7 @@
 const x = Number(process.argv[2]);
 
 if (x === undefined || isNaN(x)) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else if (x < 0) {
   // pass // use '// pass' for do nothing
 } else {
