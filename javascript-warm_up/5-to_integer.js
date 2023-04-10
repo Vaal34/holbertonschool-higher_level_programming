@@ -1,13 +1,10 @@
 #!/usr/bin/node
 
 const argv = process.argv;
+const numbertest = Number(argv[2]);
 
-Number_test = Number(argv[2])
-
-if (isNaN(Number_test)) {
-  console.log('Not a Number')}
-else if (Number_test % 1 !== 0) {
-  console.log('My number: ' + Number.parseInt(argv[2]))
+if (isNaN(numbertest)) { // check if number have Nan in value
+  console.log('Not a Number');
 } else {
-  console.log('My number: ' + argv[2])
+  console.log('My number: ' + Number.parseInt(argv[2])); // Parse and take the first part if is float
 }
