@@ -9,10 +9,9 @@ request(url, function (err, content, body) {
     console.log(err);
   } else {
     const response = JSON.parse(body);
-    for (const i in response.results) {
-      const characters = response.results[i].characters;
-      for (const j in characters) {
-        if (characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
+    for (const dataResults of response.results) {
+      for (const dataCharacter of dataResults.characters) {
+        if (dataCharacter.includes('18')) {
           count += 1;
         }
       }
