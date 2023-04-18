@@ -11,7 +11,7 @@ request(url, function (err, content, body) {
   } else {
     const data = JSON.parse(body);
     const maxLength = data.length - 1;
-    if (maxLength === 0) {
+    if (maxLength === -1) {
       return {};
     } else {
       const allId = data[maxLength];
