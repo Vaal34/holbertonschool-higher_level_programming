@@ -11,16 +11,24 @@ request(url, function (err, content, body) {
   } else {
     const data = JSON.parse(body);
     const maxLength = data.length - 1;
-    const numberOfId = data[maxLength];
-    for (let i = 1; i <= numberOfId.userId; i++) {
-      let count = 0;
-      for (const value of data) {
-        if (value.userId === i) {
-          if (value.completed === true) { count += 1; }
+    if (maxLength === 0) {
+      return {};
+    } else {
+      const allId = data[maxLength];
+      for (let i = 1; i <= allId.userId; i++) {
+        let count = 0;
+        for (const value of data) {
+          if (value.userId === i) {
+            if (value.completed === true) { count += 1; }
+          }
+        }
+        if (count === 0) {
+          // pass
+        } else {
+          dict[i] = count;
         }
       }
-      dict[i] = count;
+      console.log(dict);
     }
-    console.log(dict);
   }
 });
