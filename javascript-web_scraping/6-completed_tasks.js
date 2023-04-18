@@ -12,7 +12,7 @@ request(url, function (err, content, body) {
     const data = JSON.parse(body);
     const maxLength = data.length - 1;
     if (maxLength === -1) {
-      return {};
+      return dict;
     } else {
       const allId = data[maxLength];
       for (let i = 1; i <= allId.userId; i++) {
